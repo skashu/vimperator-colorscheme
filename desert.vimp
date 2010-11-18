@@ -1,0 +1,97 @@
+" ==VimperatorColorScheme
+" name:         desert
+" ==/VimperatorColorScheme==
+
+" CmdLine highliting groups {{{
+hi CmdLine   font-family: monospace; padding: 1px;
+hi CmdOutput white-space: pre;
+"hi Indicator 
+hi ModeMsg	 color: Goldenrod;   background: #333; font-size: 10pt;
+hi MoreMsg   color: SeaGreen;    background: #333; font-size: 10pt;
+hi Normal 	 color: LightYellow; background: #333; font-size: 10pt;
+hi NonText   color: LightBlue;   background: #333; font-size: 10pt;
+"hi Preview
+hi Question	color: SpringGreen;  background: #333; font-size: 10pt;
+"}}}
+
+" StatusLine highliting groups {{{
+hi StatusLine         color: Black;     background: #c2bfa5; font-size: 10pt; font-weight: normal;
+hi StatusLineBroken   color: IndianRed; background: #c2bfa5; font-size: 10pt; font-weight: normal;
+hi StatusLineExtended color: DimGray;   background: #c2bfa5; font-size: 10pt; font-weight: normal;
+hi StatusLineSecure   color: DimGray;   background: #c2bfa5; font-size: 10pt; font-weight: normal;
+"}}}
+
+" Complete highlighting groups {{{
+hi CompDesc                      color: SkyBlue; width: 50%; max-width: 50%;
+" hi CompGroup
+hi CompGroup:not(:first-of-type) margin-top: .5em;
+hi CompIcon                      width: 16px; min-width: 16px; display: inline-block; margin-right: .5ex;
+hi CompIcon>img                  max-width: 16px; max-height: 16px; vertical-align: middle;
+" hi CompItem
+hi CompItem>*                    padding: 0 .5ex;
+hi CompItem[selected]            color: White; background: DimGray;
+hi CompLess                      text-align: center; height: 0;    line-height: .5ex; padding-top: 1ex;
+hi CompLess::after               content: "\2303"
+hi CompMore                      text-align: center; height: .5ex; line-height: .5ex; margin-bottom: -.5ex;
+hi CompMore::after               content: "\2304"
+hi CompMsg                       font-style: italic; margin-left: 16px;
+hi CompResult                    width: 45%; overflow: hidden; max-width: 60%;
+hi CompTitle	  	             color: Gold; background: #444;
+hi CompTitle>*                   padding: 0 .5ex;
+hi Filter                        color: Wheat; background: Peru;
+hi Keyword                       color: Khaki;
+hi Tag                           color: DarkKhaki;
+hi Title                         color: IndianRed;
+hi URL                           text-decoration: none; color: #ffa0a0;
+hi URL:hover                     text-decoration: underline; cursor: pointer;
+"}}}
+
+" Hint highlighting gruops {{{
+hi Hint                           font-family: monospace; font-size: 16px; font-weight: normal; color: SlateGray; background-color: Khaki; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding: 0px;
+hi Hint::after                    content: attr(number);
+hi HintActive                     background-color: OliveDrab; color: Khaki;
+hi HintElem                       background-color: Wheat;     color: Peru;
+hi HintImage                      opacity: .5;
+"}}}
+
+" Message highliting gruops {{{
+hi WarningMsg color: Salmon;      background: #333; font-size: 10pt;
+hi InfoMsg    color: LightYellow; background: #333;	font-size: 10pt;
+hi ErrorMsg   color: white;       background: red;  font-size: 10pt;
+"hi LineNr
+hi Message    white-space: normal; min-width: 100%; padding-left: 2em; text-indent: -2em; display: block;
+"}}}
+
+" Tab highlitings groups {{{
+" hi TabClose
+" hi TabIcon
+hi TabNumber                      font-weight: bold; margin: 0px; padding-right: .3ex;
+hi TabIconNumber                  font-weight: bold; color: white; text-align: center; text-shadow: black -1px 0 1px, black 0 1px 1px, black 1px 0 1px, black 0 -1px 1px; 
+" hi TabText
+"}}}
+
+" syntax highliting groups {{{
+hi Null			color: Khaki;
+hi Number		color: #ffa0a0;
+hi Object		color: NavajoWhite;
+hi String		color: #ffa0a0;
+hi Function		color: palegreen;
+hi Boolean      color: #ffa0a0;
+"}}}
+
+"hi Bell
+hi Gradient                       height: 0px;
+hi Search       color: Wheat;       background: Peru;
+
+"about:blankの背景色を変更
+style -name about_blank about:blank <<EOM
+* { background: #333; }
+EOM
+
+"Visual modeのハイライトを変更 
+style -name visual * <<EOM
+*::-moz-selection { color: Khaki; background: OliveDrab; }
+EOM
+
+" vim: set fdm=marker:
+" vim: set ft=vimperator:
